@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  place-items: center;
+  height: 100vh;
+  margin: 15rem 0 0 17rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin-top: 15rem;
+  margin-left: 250px;
+}
+
+.shimmer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #f1f1f1 8%, #d8d8d8 18%, #f1f1f1 33%);
+
+  background-size: 1000px 100%;
+  animation: shimmerAnimation 1s infinite linear;
+}
+
+@keyframes shimmerAnimation {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

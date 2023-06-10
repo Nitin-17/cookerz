@@ -1,0 +1,118 @@
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  background-color: #b2f2bb;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  background-color: #b2f2bb;
+}
+
+/* For Header List Items */
+.nav-items > ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Logo */
+.logo {
+  width: 10%;
+  height: 70%;
+  margin: 1.2rem 0 0 1rem;
+}
+
+/* Restaurant Cards */
+.restaurant-card {
+  width: 250px;
+  border: 1px solid #2f9e44;
+  padding: 1rem;
+  margin: 1 rem;
+}
+
+.restaurant-card > img {
+  width: 100%;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(auto, 500px);
+  margin-left: 0.7rem;
+  grid-gap: 1rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 63em) {
+  html {
+    /* font-size:8px */
+    /* 8px/16px=0.5=50% */
+  }
+
+  .restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(auto, 500px);
+    margin-left: 0.7rem;
+    grid-gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+/* For Search container */
+.search-container {
+  display: grid;
+  grid-template-columns: 250px 70px;
+  grid-template-rows: 30px;
+  grid-gap: 10px;
+  margin: 1.5rem 0 1.5rem 0.7rem;
+}
+
+.search-input {
+  border-radius: 5px;
+  background-color: #ebfbee;
+  border: 1px solid #2b8a3e;
+}
+
+.search-btn {
+  border-radius: 5px;
+  background-color: #37b24d;
+  border: 1px solid #2b8a3e;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #51cf66;
+}
+
+/* For Shimmer Effect */
+.shimmer-card {
+  width: 200px;
+  height: 200px;
+  background-color: #ebfbee;
+  background: linear-gradient(to right, #f1f1f1 8%, #d8d8d8 18%, #f1f1f1 33%);
+
+  background-size: 1000px 100%;
+  animation: shimmerAnimation 1s infinite linear;
+}
+
+@keyframes shimmerAnimation {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
